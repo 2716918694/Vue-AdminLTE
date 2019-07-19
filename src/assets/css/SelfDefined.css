@@ -1,0 +1,94 @@
+.font-sm{
+    font-size: 12px !important;
+}
+.font-md{
+    font-size: 16px !important;
+}
+.no-left-padding{
+    padding-left: 0 !important;
+}
+.no-right-padding{
+    padding-right: 0 !important;
+}
+.no-left-right-padding{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.no-top-margin{
+    margin-top: 0 !important;
+}
+.no-bottom-margin{
+    margin-bottom: 0 !important;
+}
+.no-top-bottom-margin{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.flex{
+    display: flex;
+}
+/**自定义checkbox样式
+    usage：
+        <div class="checkbox">
+            <input id="ck1" type="checkbox"  value="**" v-model="***“>
+            <label for="ck1" @click=”“>xxx</label>
+        </div>
+
+**/
+.checkbox {
+    position: relative;
+    height: 24px;
+}
+.checkbox input[type='checkbox'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+.checkbox label {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    height: 26px;
+    line-height: 26px;
+}
+.checkbox label:before {
+    content: '';
+    position: absolute;
+    left: -27px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.checkbox label:after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    width: 6px;
+    height: 12px;
+    border: 0;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background: #fff;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.checkbox input[type='checkbox']:checked + label:before {
+    background: #4cd764;
+    border-color: #4cd764;
+}
+.checkbox input[type='checkbox']:checked + label:after {
+    background: #4cd764;
+}
