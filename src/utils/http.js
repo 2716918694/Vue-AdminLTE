@@ -40,6 +40,7 @@ const toLogin = () => {
     switch (status) {
         // 401: 未登录状态，跳转登录页
         case 401:
+            //if(confirm('请先登录'))
             toLogin();
             break;
         // 403 token过期
@@ -48,6 +49,7 @@ const toLogin = () => {
             //tip('登录过期，请重新登录');
             localStorage.removeItem('token');
             //store.commit('loginSuccess', null);
+            alert('登录过期，请重新登录');
             setTimeout(() => {
                 toLogin();
             }, 1000);
@@ -99,7 +101,7 @@ instance.interceptors.response.use(
             // network状态在app.vue中控制着一个全局的断网提示组件的显示隐藏
             // 关于断网组件中的刷新重新获取数据，会在断网组件中说明
             //store.commit('changeNetwork', false);
-            console.log("Something wrong about connect")
+            console.log("==无响应数据==")
         }
     });
 

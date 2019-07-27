@@ -10,7 +10,7 @@ const account = {
 
     // post提交，获取注册验证码
     sendOtp(phone) {
-        return axios.post(`${base.local}/user/getotp`, qs.stringify(phone));
+        return axios.post(`${base.local}/user/getOtp`, qs.stringify(phone));
     },
 
     // post提交，登录
@@ -20,12 +20,12 @@ const account = {
 
     // post提交，验证手机注册码
     verifyOtp (params) {
-        return axios.post(`${base.local}/user/verifyotp`,qs.stringify(params));
+        return axios.post(`${base.local}/user/postOtp`,qs.stringify(params));
     },
 
     // post提交，用户注册信息
     registerByPhone (params) {
-        return axios.post(`${base.local}/user/registerbyphone`,qs.stringify(params));
+        return axios.post(`${base.local}/user/putUserByPhone`,qs.stringify(params));
     }
 }
 

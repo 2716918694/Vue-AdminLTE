@@ -76,6 +76,8 @@
         }).then(res=>{
           alert("登录成功")
           this.$router.push("/start")
+        }).catch(error=>{
+          alert(error.data.status)
         })
       }
     }

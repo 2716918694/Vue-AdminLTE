@@ -149,7 +149,7 @@ export default {
       }
       this.$api.account.verifyOtp({
         telephone: this.phone,
-        verifyCode: this.verifyCode
+        otpCode: this.verifyCode
       }).then(res=> {
         if(res.data.data === 'success')
           this.confirmStatus = true
